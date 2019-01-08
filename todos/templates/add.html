@@ -1,0 +1,15 @@
+{% include 'partials/header.html' %}
+<form action="{% url 'add' %}" method="post">
+<div class="form-group">
+    {% csrf_token %}
+    <label for="exampleInputEmail1">Title</label><br>
+    <input type="text"  class="form-control" name="title" id="title" />
+    <label for="text">Task Description</label><br>
+    <textarea  class="form-control" name="text" id="text" ></textarea>
+    <br>
+        <div class="col-sm-12">
+      <input type="submit" class="btn btn-primary btn-block" name="submit" value="Add Task">
+    </div>
+    </div>
+</form>
+{% include 'partials/footer.html'%}
