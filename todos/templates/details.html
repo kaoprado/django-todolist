@@ -1,9 +1,5 @@
 {% include 'partials/header.html'%}
-<div class="card bg-light mb-3 mt-3">
-  <div class="card-header"><h1>#{{todo.id}} {{todo.title}}</h1></div>
-  <div class="card-body">
-    <h5 class="card-title"><h6>Created on {{todo.created_at}}</h6></h5>
-    <p class="card-text">{{todo.text}}</p>
-  </div>
-</div>
+<blockquote><h5>#{{todo.id}} {{todo.title}}</h5></blockquote>
+<blockquote>{{todo.text}}</blockquote>
+<blockquote>Created at {{todo.created_at}}</blockquote>
 {% include 'partials/footer.html'%}

@@ -7,8 +7,7 @@ from .models import Todo
 # Create your views here.
 
 def index(request):
-    todos = Todo.objects.all()
-
+    todos = Todo.objects.all().order_by('completed','created_at')
     context = {
         'todos' : todos,
     }
